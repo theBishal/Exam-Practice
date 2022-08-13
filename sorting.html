@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="demo 2"></p>
+
+    <p id="demo 3"></p>
+    <p id="demo 4"></p>
+    <script>
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        fruits.sort();   // sort in ascending order for alphabetical order
+        document.getElementById('demo').innerHTML = fruits;
+        fruits.reverse();   // reverse the order of the array
+        document.getElementById('demo 2').innerHTML = fruits;
+
+        const num = [34, 203, 3, 746, 200, 984, 198, 764, 9];
+        num.sort(function(a,b){return a-b});        // sort in ascending order for numerical order
+        document.getElementById('demo 3').innerHTML = num;
+        num.sort(function(a,b){return b-a});        // sort in descending order for numerical order
+        document.getElementById('demo 4').innerHTML = num;
+    </script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container
+        {
+            display: flex;
+            position: relative'
+        }
+        .box
+        {
+            width: 100px;
+            height: 100px;
+            margin: 15px;
+            border: 1px solid;
+        }
+        .box1
+        {
+           
+            background-color: red;
+            position: absolute;
+        }
+        .box2
+        {
+            position: absolute;
+            top: 50px;
+            left: 25px;
+            
+            background-color: blue;
+        }
+        .box3
+        {
+            position: absolute;
+            top: 100px;
+            left: 70px;
+          
+            background-color: green;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="conatiner">
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
+    </div>
+    <script>
+        const boxel1 = document.querySelector(".box1");
+        const boxel2 = document.querySelector(".box2");
+        const boxel3 = document.querySelector(".box3");
+
+        boxel1.addEventListener("click", function(event)
+        {
+            boxel1.style.zIndex = 10;
+            boxel2.style.zIndex =1;
+            boxel3.style.zIndex = 1;
+        });
+        boxel2.addEventListener("click", function(event)
+        {
+            boxel2.style.zIndex = 10;
+            boxel1.style.zIndex = 1;
+            boxel3.style.zIndex = 1;
+        });
+        boxel3.addEventListener("click", function(event)
+        {
+            boxel3.style.zIndex = 10;
+            boxel1.style.zIndex = 1;
+            boxel2.style.zIndex = 1;
+
+       
+       
+        });
+    </script>
+</body>
+</html>

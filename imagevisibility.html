@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="./bishal.jpg" alt="Bishal" id="pic" style="width: 100px; height: 100px;">
+    <button id="vis">Click for Visibility</button>
+    <button id="hid">Click for Hidden</button>
+    <script>
+        const pict = document.getElementById('pic');
+        const vis = document.getElementById('vis');
+        const hid = document.getElementById('hid');
+        vis.addEventListener('click', function(){
+            pict.style.visibility = 'visible';
+        } );
+        hid.addEventListener('click', function(){
+            pict.style.visibility = 'hidden';
+        } );
+    </script>
+</body>
+</html>
